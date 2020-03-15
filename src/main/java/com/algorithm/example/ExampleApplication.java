@@ -1,5 +1,6 @@
 package com.algorithm.example;
 
+import com.algorithm.example.generate.Generate;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

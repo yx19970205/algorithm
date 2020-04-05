@@ -21,7 +21,7 @@ public class utilsTest {
         list.add(2);
         System.out.println(list.toString());
 
-        utils.swap(list, 0 ,1);
+        ListUtils.swap(list, 0 ,1);
         System.out.println(list.toString());
     }
 }

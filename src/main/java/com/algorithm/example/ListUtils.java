@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class utils {
+public class ListUtils {
     public static void swap(List<Integer> list, int x, int y) {
         int temp = list.get(x);
         list.set(x, list.get(y));
@@ -38,5 +38,25 @@ public class utils {
             }
         }
         return true;
+    }
+
+    /**
+     * 二分查找
+     */
+    public static int binarySearch(List<Integer> list, Integer target) {
+        int begin = 0;
+        int end = list.size() - 1;
+        int middle;
+        while (begin <= end) {
+            middle = (begin + end) / 2;
+            if (list.get(middle) == target) {
+                return middle;
+            } else if (list.get(middle) < target) {
+                begin = middle + 1; //节点1
+            } else {
+                end = middle - 1; //节点2
+            }
+        }
+        return begin;
     }
 }
